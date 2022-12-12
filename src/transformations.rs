@@ -15,6 +15,10 @@ pub fn to_snake_case(s: &str) -> String {
         return s.replace(" ", "_").to_lowercase();
     }
 
+    if s.contains("_") {
+        return s.to_lowercase();
+    }
+
     let result = SNAKE_CASE_RE.replace_all(&s, r"_$L$1");
 
     if result.starts_with("_") {
@@ -77,6 +81,10 @@ mod tests {
         let tests = vec![
             TestCase::new(String::from("hello"), String::from("hello")),
             TestCase::new(String::from("my Homework"), String::from("my_homework")),
+            TestCase::new(
+                String::from("HELO_MAY_ANME_IS"),
+                String::from("helo_may_anme_is"),
+            ),
             TestCase::new(
                 String::from("project10 2022"),
                 String::from("project10_2022"),
