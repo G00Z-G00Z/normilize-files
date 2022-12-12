@@ -7,7 +7,4 @@ pub struct Args {
     /// Path
     pub path: String,
 
-    /// Is the transform recursive
-    #[arg(short, long)]
-    pub recursive: bool,
 }
