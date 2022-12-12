@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cargo run -- ./test_dir
+cargo run -- ./test_dir/cammel
