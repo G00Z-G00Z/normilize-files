@@ -3,6 +3,13 @@
 This is a rust command that looks into a directory, and normilizes files. In
 this particular example, it changes all names to be snake case.
 
+# Develop
+
+You can star developing using the test_dir. Just run the command: 
+```bash
+./generate-test-dir.sh
+```
+
 ## Example
 
 Given the following directory: 
